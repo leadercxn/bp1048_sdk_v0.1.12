@@ -1,0 +1,2 @@
+RseFlashDriverModel=<?xml version\="1.0" encoding\="UTF-8" standalone\="yes"?><rseFlashDriverModel><addr>0x0</addr><eraseAll>true</eraseAll><flashDriver>D\:/Tonyprj/Main/1_Prj/B1X/B1XSOC/BTSDK/B1_code_1793/MVsB1_Base_SDK/Tools/b1_download_v0.9.exe</flashDriver><imageFile>D\:\\Tonyprj\\Main\\1_Prj\\B1X\\B1XSOC\\BTSDK\\B1_code_1804\\MVsB1_Base_SDK\\examples\\Example_RTC\\Debug\\output\\Example_RTC.bin</imageFile><lock>false</lock><unlock>false</unlock><verify>false</verify></rseFlashDriverModel>
+eclipse.preferences.version=1

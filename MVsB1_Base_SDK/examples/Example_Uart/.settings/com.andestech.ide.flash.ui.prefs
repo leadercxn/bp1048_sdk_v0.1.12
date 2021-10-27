@@ -1,0 +1,2 @@
+RseFlashDriverModel=<?xml version\="1.0" encoding\="UTF-8" standalone\="yes"?><rseFlashDriverModel><addr>0x0</addr><eraseAll>false</eraseAll><flashDriver>b1_download.exe</flashDriver><imageFile>D\:\\zcm\\B1X\\chip\\code\\20190808\\MVsB1_Base_SDK\\examples\\Example_Uart\\Debug\\output\\Example_Uart.bin</imageFile><lock>false</lock><unlock>false</unlock><verify>true</verify></rseFlashDriverModel>
+eclipse.preferences.version=1

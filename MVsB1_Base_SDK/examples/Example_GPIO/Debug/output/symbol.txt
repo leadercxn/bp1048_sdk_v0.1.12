@@ -1,0 +1,276 @@
+00000000 a EILM_BEGIN
+00000000 a NDS_SAG_LMA_EILM
+00000000 W _ITB_BASE_
+00000000 W _RELAX_END_	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/retarget.c:20
+00000000 T _start	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/retarget.c:20
+00000000 t exception_vector	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/retarget.c:20
+000000a4 t exception_vector_end	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/init-default.c:350
+000000a4 T stub	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/init-default.c:349
+00000104 t flash_udelay
+00000180 t flash_delayms
+0000019a t FshcGpioSet
+000001bc t FshcInit
+000001d6 t FshcSendCmd
+0000020a t FshcSpiIOModeCfg
+000004f2 t SpiFlashResetCRM
+0000052e t SpiFlashResume
+00000562 t SpiFlashSuspend
+00000596 t SpiFlashReadId
+000006a2 t SpiFlashReadStatus
+00000748 t SpiFlashIsBusy
+00000764 t SpiFlashWriteStatus
+000008f2 t SpiFlashIOModeCfg
+00000966 t SpiFlashDeepPowerDown
+00000996 t SpiFlashReleaseFromDeepPowerDown
+000009b6 t SpiFlashWriteUnLock
+00000afc t SpiFlashWriteLock
+00000c40 T IsFlashBusy
+00000c4c T SetFlashBusy
+00000c54 T ClearFlashBusy
+00000c5c W vTaskDelay
+00000c5e t Flash_Memset
+00000c6e T FshcClkSwitch
+00000cf8 T SpiFlashResumDelaySet
+00000d6c T SpiFlashClkSwitch
+00000d80 t flash_exit_2bitcrm
+00000daa T ByteRecombineToDword
+00000dc6 T SpiFlashRead
+00000eee T SpiFlashEraseResume
+00000f6c T SpiFlashWrite
+0000120a T SpiFlashGetStatus
+00001240 T SpiFlashFshcStatusSetIdle
+0000128c T SpiFlashErase
+000013b2 T FlashErase
+0000146c T SpiFlashInit
+00001546 T SpiFlashInfoGet
+0000154c T SpiFlashIOCtrl
+00001604 r SpiFlash
+00001748 t ISR_TABLE	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:52
+000017c4 t OS_Trap_TLB_Fill	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:94
+000017d4 t OS_Trap_PTE_Not_Present	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:103
+000017e4 t OS_Trap_TLB_Misc	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:111
+000017f4 t OS_Trap_TLB_VLPT_Miss	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:120
+00001804 t OS_Trap_Machine_Error	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:128
+00001814 t OS_Trap_Debug_Related	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:136
+00001824 t OS_Trap_General_Exception	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:144
+00001834 t OS_Trap_Syscall	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:152
+00001844 t OS_Trap_Int_Comm	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:159
+0000192e t OS_Trap_Interrupt_HW0	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:169
+00001938 t OS_Trap_Interrupt_HW1	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:174
+00001942 t OS_Trap_Interrupt_HW2	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:179
+0000194c t OS_Trap_Interrupt_HW3	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:184
+00001956 t OS_Trap_Interrupt_HW4	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:189
+00001960 t OS_Trap_Interrupt_HW5	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:200
+00001986 t OS_Trap_Interrupt_HW6	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:205
+00001990 t OS_Trap_Interrupt_HW7	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:210
+0000199a t OS_Trap_Interrupt_HW8	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:215
+000019a4 t OS_Trap_Interrupt_HW9	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:220
+000019ae t OS_Trap_Interrupt_HW10	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:225
+000019b8 t OS_Trap_Interrupt_HW11	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:230
+000019c2 t OS_Trap_Interrupt_HW12	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:235
+000019cc t OS_Trap_Interrupt_HW13	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:240
+000019d6 t OS_Trap_Interrupt_HW14	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:245
+000019e0 t OS_Trap_Interrupt_HW15	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:250
+000019ea t OS_Trap_Interrupt_HW16	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:255
+000019f4 t OS_Trap_Interrupt_HW17	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:260
+000019fe t OS_Trap_Interrupt_HW18	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:265
+00001a08 t OS_Trap_Interrupt_HW19	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:270
+00001a12 t OS_Trap_Interrupt_HW20	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:275
+00001a1c t OS_Trap_Interrupt_HW21	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:280
+00001a26 t OS_Trap_Interrupt_HW22	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:285
+00001a30 t OS_Trap_Interrupt_HW23	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:290
+00001a3a t OS_Trap_Interrupt_HW24	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:295
+00001a44 t OS_Trap_Interrupt_HW25	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:300
+00001a4e t OS_Trap_Interrupt_HW26	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:305
+00001a58 t OS_Trap_Interrupt_HW27	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:310
+00001a62 t OS_Trap_Interrupt_HW28	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:315
+00001a6c t OS_Trap_Interrupt_HW29	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:320
+00001a76 t OS_Trap_Interrupt_HW30	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:325
+00001a80 t OS_Trap_Interrupt_HW31	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:330
+00001a8c t ___start	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/crt0.S:350
+00001adc T Clock_DeepSleepSysClkSelect
+00001be0 T Clock_CoreClkDivSet
+00001bf8 T Clock_CoreClkDivGet
+00001c02 T Clock_SysClkDivGet
+00001c20 T Clock_PllFreqGet
+00001c26 T Clock_APllFreqGet
+00001c2c T Clock_CoreClockFreqGet
+00001c98 T Clock_SysClockFreqGet
+00001cce T Clock_SysClkDivSet
+00001d28 T GPIO_RegOneBitSet
+00001d38 T GPIO_RegOneBitClear
+00001d4c T DelayMs
+00001d9e T __udelay
+00001df0 T GpioInterrupt	/cygdrive/c/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/examples/Example_GPIO/Debug/../src/gpio_example.c:664
+00001e46 T DMA0_Interrupt
+00001ec6 T DMA1_Interrupt
+00001f60 T DMA2_Interrupt
+00001ffa T DMA3_Interrupt
+00002094 T DMA4_Interrupt
+0000212e T DMA5_Interrupt
+000021c8 T DMA6_Interrupt
+00002262 T DMA7_Interrupt
+000022fc T GetSysTick1MsCnt
+00002302 T PastTimeGet
+00002316 T TimeOutSet
+00002336 T IsTimeOut
+000023ec W UART1_Interrupt
+00002474 T UART0_InitWpr	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/driver/driver_api/src/uarts_interface.c:31
+00002486 T UART1_InitWpr	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/driver/driver_api/src/uarts_interface.c:36
+00002498 T UART0_RecvWpr	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/driver/driver_api/src/uarts_interface.c:41
+000024aa T UART1_RecvWpr	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/driver/driver_api/src/uarts_interface.c:46
+000024bc T UART0_SendByteWpr	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/driver/driver_api/src/uarts_interface.c:90
+000024ce T UART1_SendByteWpr	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/driver/driver_api/src/uarts_interface.c:103
+000024e0 T OutputExample	/cygdrive/c/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/examples/Example_GPIO/Debug/../src/gpio_example.c:84
+000026a2 T InputExample	/cygdrive/c/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/examples/Example_GPIO/Debug/../src/gpio_example.c:168
+00002758 T InterruptExample	/cygdrive/c/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/examples/Example_GPIO/Debug/../src/gpio_example.c:226
+00002860 T PullUpDownExample	/cygdrive/c/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/examples/Example_GPIO/Debug/../src/gpio_example.c:291
+00002972 T PullDownCurrentExample	/cygdrive/c/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/examples/Example_GPIO/Debug/../src/gpio_example.c:350
+00002b40 T RegisterResetMaskExample	/cygdrive/c/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/examples/Example_GPIO/Debug/../src/gpio_example.c:434
+00002bba T GpioTogglebyMcuExample	/cygdrive/c/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/examples/Example_GPIO/Debug/../src/gpio_example.c:464
+00002c32 T GpioTogglebyDmaExample	/cygdrive/c/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/examples/Example_GPIO/Debug/../src/gpio_example.c:512
+00002d10 T main	/cygdrive/c/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/examples/Example_GPIO/Debug/../src/gpio_example.c:559
+00002e8e W BLE_Interrupt	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/init-default.c:49
+00002e8e W BT_Interrupt	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/init-default.c:49
+00002e8e t Default_Handler	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/init-default.c:47
+00002e8e W FFTInterrupt	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/init-default.c:49
+00002e8e W I2C_Interrupt	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/init-default.c:49
+00002e8e W I2sInterrupt	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/init-default.c:49
+00002e8e W IRInterrupt	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/init-default.c:49
+00002e8e W OS_Trap_Interrupt_SWI	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/init-default.c:49
+00002e8e W RtcInterrupt	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/init-default.c:49
+00002e8e W SDIO0_Interrupt	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/init-default.c:49
+00002e8e W SPIM_Interrupt	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/init-default.c:49
+00002e8e W SPIS_Interrupt	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/init-default.c:49
+00002e8e W SWInterrupt	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/init-default.c:49
+00002e8e W SpdifInterrupt	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/init-default.c:49
+00002e8e W Timer2Interrupt	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/init-default.c:49
+00002e8e W Timer3Interrupt	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/init-default.c:49
+00002e8e W Timer4Interrupt	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/init-default.c:49
+00002e8e W Timer5Interrupt	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/init-default.c:49
+00002e8e W Timer6Interrupt	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/init-default.c:49
+00002e8e W UART0_Interrupt	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/init-default.c:49
+00002e8e W UsbInterrupt	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/init-default.c:49
+00002e8e W WakeupInterrupt	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/init-default.c:49
+00002e90 T ExceptionCommHandler	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/init-default.c:53
+000030b8 T __c_init	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/init-default.c:186
+000030ec T __cpu_init	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/init-default.c:213
+0000318e T HardwareStackProtectEnable	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/init-default.c:316
+000031b4 T __init	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/init-default.c:336
+000031d6 T GIE_ENABLE	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/interrupt.c:16
+000031e0 T GIE_DISABLE	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/interrupt.c:21
+000031ee T GIE_STATE_GET	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/interrupt.c:27
+000031f6 T NVIC_EnableIRQ	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/interrupt.c:70
+0000320e T NVIC_DisableIRQ	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/interrupt.c:82
+00003228 t GetPswINTL	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/retarget.c:30
+00003236 W SwUartSend	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/retarget.c:25
+00003238 T putchar	/cygdrive/c/software_install/AndeSight/install/toolchains/nds32le-elf-mculib-v3s/nds32le-elf/include/stdio.h:212
+000032c8 T nds_write	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/retarget.c:85
+000032e8 T DbgUartInit	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/retarget.c:94
+0000330c T Chip_VMIDDetectDisable
+0000331e T Chip_Init
+000033b4 T Chip_MemInit
+000033c0 T Clock_Config
+00003442 T WaitOscillateWork
+0000345c T Clock_RcFreqGet
+00003502 T Clock_PllLock
+000035f8 T Clock_SysClkSelect
+00003686 T Clock_UARTClkSelect
+000036de T Clock_Module1Enable
+000036ee T Clock_Module2Enable
+000036fe T Clock_Module3Enable
+0000370e T EnableMPU
+00003770 T EnableIDCache
+000037b2 T DMA_ChannelAllocTableSet
+000037c4 T DMA_ChannelEnable
+000037f0 T DMA_ChannelDisable
+0000381e T DMA_BlockConfig
+000039bc T DMA_CircularConfig
+00003ba0 T DMA_CircularWritePtrSet
+00003bd4 T DMA_TimerConfig
+00003c4e T Efuse_ReadData
+00003cb4 T GPIO_RegOneBitGet
+00003cc8 T GPIO_RegBitsSet
+00003cd8 T GPIO_RegBitsClear
+00003cea T GPIO_RegSet
+00003cf4 T GPIO_RegGet
+00003cfe T GPIO_INTEnable
+00003d66 T GPIO_INTFlagClear
+00003d7c T GPIO_INTFlagGet
+00003d92 T GPIO_OutMaskSet
+00003dce T GPIO_PortAModeSet
+00004a58 T GPIO_PortAPulldownSet
+000051a6 T GPIO_PortBPulldownSet
+000053be T GPIO_PortAOutDsSet
+00005c00 T GPIO_PortBOutDsSet
+00005df4 T GPIO_RegisterResetMask
+00005dfe T Remap_AddrRemapSet
+00005e98 T Remap_InitTcm
+00005ec8 T Reset_McuSystem
+00005ed2 T SysTickInit
+00005efc W SystickInterrupt
+00005f14 T ClockFreqGet
+00005f40 T Timer_Config
+000060d8 T Timer_Start
+00006150 t UART_BaudClkGet
+000061a6 T UART0_Init
+00006366 T UART1_Init
+00006526 T UART0_Recv
+00006580 T UART1_Recv
+000065da T UART0_SendByte
+0000661a T UART1_SendByte
+0000665a T WDG_Disable
+00006680 T __divdi3	/home/sqa/build-ast300/build-toolchain/build-2017-03-15/source-packages/gcc-4.9.3-bsp-v4_1_0-branch/libgcc/config/nds32/lib1asmsrc-mculib.S:451
+000066c0 t fudiv_qrnnd	/home/sqa/build-ast300/build-toolchain/build-2017-03-15/source-packages/gcc-4.9.3-bsp-v4_1_0-branch/libgcc/config/nds32/lib1asmsrc-mculib.S:961
+00006718 T __udivmoddi4	/home/sqa/build-ast300/build-toolchain/build-2017-03-15/source-packages/gcc-4.9.3-bsp-v4_1_0-branch/libgcc/config/nds32/lib1asmsrc-mculib.S:1152
+00006870 T memcpy
+0000689c T memset
+000068cc T printf
+000068d6 T puts
+00006926 t vprintf_help
+0000695a T vprintf
+000069a8 T do_printf
+00006e50 t sep_frac
+00006e82 T _printf_float
+00007554 T strcpy
+00007568 T strlen
+00007574 T abs
+0000757c T _write
+00007594 T __lshrdi3	/home/sqa/build-ast300/build-toolchain/build-2017-03-15/source-packages/gcc-4.9.3-bsp-v4_1_0-branch/libgcc/libgcc2.c:403
+000075bc T __ashldi3	/home/sqa/build-ast300/build-toolchain/build-2017-03-15/source-packages/gcc-4.9.3-bsp-v4_1_0-branch/libgcc/libgcc2.c:431
+00008410 R MPUConfigTable	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/init-default.c:379
+00008500 A __data_lmastart
+000088f8 A EILM_SIZE
+20004000 D UARTS_SendByte_MAP	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/driver/driver_api/inc/uarts_interface.h:267
+20004000 D __data_start
+20004000 A _stack
+20004008 D UARTS_Recv_MAP	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/driver/driver_api/inc/uarts_interface.h:264
+20004010 D UARTS_Init_MAP	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/driver/driver_api/inc/uarts_interface.h:263
+20004018 d DmaChannelMap	/cygdrive/c/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/examples/Example_GPIO/Debug/../src/gpio_example.c:52
+20004038 D BtHoscClkDiv
+2000403a D IsApllFreeRun
+2000403b D IsDpllFreeRun
+2000403c D rc_clk_freq
+20004040 D gSOCInFreq
+20004044 D gAPLLWorkFreq
+20004048 D gPLLWorkFreq
+2000404c D DMAEintTable
+2000406c D DMATintTable
+2000408c D DMADintTable
+200040ac d DMAConfigTable
+200043d8 d DMAChannelAllocMap
+200043f8 b DmaTestBuffer.4944
+200043f8 B __bss_start
+200043f8 B _edata
+20004a10 W _FP_BASE_
+20004a10 W _SDA_BASE_
+200053f8 B gpioPinIndex	/cygdrive/c/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/examples/Example_GPIO/Debug/../src/gpio_example.c:663
+20005400 B IsSwUartActedAsUARTFlag	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/retarget.c:17
+20005401 B DebugPrintPort	/cygdrive/C/cxn/andes/bp_sdk/MVsB1_BT_Audio_SDK_v0.1.12/MVsB1_Base_SDK/startup/retarget.c:14
+20005404 b FlashBusyFlag
+20005408 b SpiFlashInfo
+2000541c B gSysTick
+20005420 b output_idx
+20005424 b output_buff
+20005428 B _NDS32_REENT__errno
+2000542c B _end

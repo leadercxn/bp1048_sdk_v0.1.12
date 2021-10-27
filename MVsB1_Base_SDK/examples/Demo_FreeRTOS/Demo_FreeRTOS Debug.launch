@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.andestech.ide.dsf.gdbjtag.launch.startupLaunchConfigurationType">
+<booleanAttribute key="--nx" value="true"/>
+<booleanAttribute key="SUPPORT_GENERAL_EXCEPTION_ALIGNMENT" value="false"/>
+<booleanAttribute key="SUPPORT_GENERAL_EXCEPTION_ARITHMETIC" value="false"/>
+<booleanAttribute key="SUPPORT_GENERAL_EXCEPTION_COPROCESSOR" value="false"/>
+<booleanAttribute key="SUPPORT_GENERAL_EXCEPTION_IMPRECISE_BUS_ERROR" value="false"/>
+<booleanAttribute key="SUPPORT_GENERAL_EXCEPTION_MPZIU_CONTROL" value="false"/>
+<booleanAttribute key="SUPPORT_GENERAL_EXCEPTION_NONEXISTENT_MEMORY_ADDRESS" value="false"/>
+<booleanAttribute key="SUPPORT_GENERAL_EXCEPTION_PRECISE_BUS_ERROR" value="false"/>
+<booleanAttribute key="SUPPORT_GENERAL_EXCEPTION_PRIVILEGED_INSTRUCTION" value="false"/>
+<booleanAttribute key="SUPPORT_GENERAL_EXCEPTION_RESERVED_INSTRUCTION" value="false"/>
+<booleanAttribute key="SUPPORT_GENERAL_EXCEPTION_RESERVED_VALUE" value="false"/>
+<booleanAttribute key="SUPPORT_GENERAL_EXCEPTION_TRAP" value="false"/>
+<booleanAttribute key="SUPPORT_HSP" value="false"/>
+<booleanAttribute key="com.andestech.ide.debug.generalexception.handler.SUPPORT_GENERAL_EXCEPTION" value="false"/>
+<stringAttribute key="com.andestech.ide.debug.generalexception.handler.SUPPORT_GENERAL_EXCEPTION_HSP_BOUND" value=""/>
+<stringAttribute key="com.andestech.ide.debug.generalexception.handler.SUPPORT_GENERAL_EXCEPTION_HSP_SPBASE" value=""/>
+<stringAttribute key="com.andestech.ide.debug.generalexception.handler.SUPPORT_GENERAL_EXCEPTION_IVB_ADDRESS" value=""/>
+<stringAttribute key="com.andestech.ide.debug.generalexception.handler.SUPPORT_GENERAL_EXCEPTION_VECTOR_SIZE" value="16"/>
+<intAttribute key="com.andestech.ide.debug.generalexception.handler.SUPPORT_HSP_TYPE" value="0"/>
+<booleanAttribute key="com.andestech.ide.dsf.gdb.core.MCU_PROGRAM" value="true"/>
+<stringAttribute key="com.andestech.ide.dsf.gdb.core.RTOS_PYTHON_SCRIPT_PATH" value="${AUTO}"/>
+<booleanAttribute key="com.andestech.ide.dsf.gdb.core.SUPPORT_RTOS" value="false"/>
+<booleanAttribute key="com.andestech.ide.dsf.gdb.core.TARGET_MANAGEMENT_SERVICE" value="true"/>
+<booleanAttribute key="com.andestech.ide.dsf.gdb.core.TRACE_CIRCULAR_BUFFER" value="true"/>
+<booleanAttribute key="com.andestech.ide.dsf.gdb.core.TRACE_DB_LIMITATION_IS_ENABLE" value="true"/>
+<stringAttribute key="com.andestech.ide.dsf.gdb.core.TRACE_DB_RECORD" value="1000000"/>
+<booleanAttribute key="com.andestech.ide.dsf.gdb.core.TRACE_IS_ENABLE" value="false"/>
+<booleanAttribute key="com.andestech.ide.dsf.gdb.core.TRACING_CENTER_BUFFER" value="false"/>
+<booleanAttribute key="com.andestech.ide.dsf.gdb.core.TRACING_FULL_BUFFER" value="false"/>
+<booleanAttribute key="com.andestech.ide.dsf.gdb.coreTRUST.READONLY.SECTIONS" value="true"/>
+<stringAttribute key="com.andestech.ide.dsf.gdbjtag.core.binaryFileName" value=""/>
+<stringAttribute key="com.andestech.ide.dsf.gdbjtag.core.binaryOffset" value=""/>
+<booleanAttribute key="com.andestech.ide.dsf.gdbjtag.core.callFlashDriver" value="false"/>
+<booleanAttribute key="com.andestech.ide.dsf.gdbjtag.core.resetAndHold" value="true"/>
+<booleanAttribute key="com.andestech.ide.dsf.gdbjtag.core.restoreBinary" value="false"/>
+<intAttribute key="org.eclipse.cdt.debug.gdbjtag.core.delay" value="0"/>
+<booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.doHalt" value="false"/>
+<booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.doReset" value="false"/>
+<stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.imageFileName" value=""/>
+<stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.imageOffset" value=""/>
+<stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.initCommands" value=""/>
+<stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.ipAddress" value="localhost"/>
+<stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.jtagDevice" value="AICE"/>
+<booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.loadImage" value="false"/>
+<booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.loadSymbols" value="false"/>
+<stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.pcRegister" value=""/>
+<intAttribute key="org.eclipse.cdt.debug.gdbjtag.core.portNumber" value="9900"/>
+<stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.runCommands" value=""/>
+<booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.setPcRegister" value="false"/>
+<booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.setResume" value="false"/>
+<booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.setStopAt" value="false"/>
+<stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.stopAt" value=""/>
+<stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.symbolsFileName" value=""/>
+<stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.symbolsOffset" value=""/>
+<booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.useFileForImage" value="false"/>
+<booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.useFileForSymbols" value="false"/>
+<booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.useProjBinaryForImage" value="true"/>
+<booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.useProjBinaryForSymbols" value="true"/>
+<booleanAttribute key="org.eclipse.cdt.debug.gdbjtag.core.useRemoteTarget" value="true"/>
+<stringAttribute key="org.eclipse.cdt.dsf.gdb.DEBUG_NAME" value="${gdb}"/>
+<stringAttribute key="org.eclipse.cdt.dsf.gdb.GDB_INIT" value="${.gdbinit}"/>
+<booleanAttribute key="org.eclipse.cdt.dsf.gdb.UPDATE_THREADLIST_ON_SUSPEND" value="false"/>
+<stringAttribute key="org.eclipse.cdt.launch.COREFILE_PATH" value=""/>
+<stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_START_MODE" value="remote"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="Debug\Demo_FreeRTOS.adx"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="Demo_FreeRTOS"/>
+<booleanAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_AUTO_ATTR" value="true"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value="config.nds32le-elf-mculib-v3s.exe.debug.825604417"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/Demo_FreeRTOS"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.dsf.launch.MEMORY_BLOCKS" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;memoryBlockExpressionList context=&quot;reserved-for-future-use&quot;/&gt;&#13;&#10;"/>
+<stringAttribute key="process_factory_id" value="org.eclipse.cdt.dsf.gdb.GdbProcessFactory"/>
+</launchConfiguration>

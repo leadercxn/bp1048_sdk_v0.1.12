@@ -1,0 +1,28 @@
+USER_SECTIONS .vector
+USER_SECTIONS .stub_section
+USER_SECTIONS .int_stack_op
+USER_SECTIONS .driver.isr
+USER_SECTIONS .tcm_section
+
+EILM 0x000000 0x00900000; address base 0x00000000, max_size=8MB
+{
+	EXEC_CODE 0x000000
+	{
+		* KEEP(.vector LMA_FORCE_ALIGN)	
+		* KEEP(.stub_section LMA_FORCE_ALIGN)
+		*spi_flash.o KEEP(+RO LMA_FORCE_ALIGN)
+		* KEEP(.int_stack_op LMA_FORCE_ALIGN)
+		* KEEP(.tcm_section LMA_FORCE_ALIGN)
+		* KEEP(.driver.isr LMA_FORCE_ALIGN)
+		* (+ISR LMA_FORCE_ALIGN,+RO LMA_FORCE_ALIGN)
+	}
+
+	EXEC_SDRAM 0x20004000
+	{
+		LOADADDR NEXT __data_lmastart
+		ADDR     NEXT __data_start
+		STACK = 0x20004000
+		* (+RW LMA_FORCE_ALIGN,+ZI LMA_FORCE_ALIGN)
+	}
+}
+

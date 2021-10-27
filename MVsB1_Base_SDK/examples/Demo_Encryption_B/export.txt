@@ -1,0 +1,20 @@
+SECTIONS
+{
+	EILM_SIZE = 0x000042e8;	 /* *ABS*  */
+	SamTest = 0x20004000;	 /* ./src/main.o  */
+	NDS_SAG_LMA_EILM = 0x00000000;	 /* *ABS*  */
+	_SDA_BASE_ = 0x20028000;	 /* *ABS*  */
+	__c_init_rom = 0x00004074;	 /* ./src/main.o  */
+	EILM_BEGIN = 0x00000000;	 /* *ABS*  */
+	_RELAX_END_ = 0x00000000;	 /* Demo_Encryption_A.adx  */
+	__bss_start = 0x20004008;	 /* Demo_Encryption_A.adx  */
+	__data_lmastart_rom = 0x000042e0;	 /* *ABS*  */
+	SamTestbuf = 0x20004008;	 /* ./src/main.o  */
+	__data_start_rom = 0x20004000;	 /* Demo_Encryption_A.adx  */
+	crc_ccitt_table = 0x000040d8;	 /* ./src/main.o  */
+	stub = 0x00000000;	 /* ./src/main.o  */
+	_edata = 0x20004008;	 /* Demo_Encryption_A.adx  */
+	_end = 0x20004038;	 /* Demo_Encryption_A.adx  */
+	CRC16 = 0x00004004;	 /* ./src/main.o  */
+	MemTest = 0x0000402c;	 /* ./src/main.o  */
+}

@@ -1,0 +1,2 @@
+RseFlashDriverModel=<?xml version\="1.0" encoding\="UTF-8" standalone\="yes"?><rseFlashDriverModel><addr>0x0</addr><eraseAll>false</eraseAll><flashDriver>D\:/00CodeSpace/B1/support/lezhiyuan/20200702_AEC/20200702A/Tools/b1_download_v1.3.exe</flashDriver><imageFile>D\:\\00CodeSpace\\B1\\support\\lezhiyuan\\20200706_AEC\\examples\\Demo_BT_Hfp\\Debug\\output\\Demo_BT_Hfp.bin</imageFile><lock>false</lock><unlock>false</unlock><verify>false</verify></rseFlashDriverModel>
+eclipse.preferences.version=1

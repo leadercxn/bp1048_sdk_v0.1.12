@@ -1,0 +1,2 @@
+RseFlashDriverModel=<?xml version\="1.0" encoding\="UTF-8" standalone\="yes"?><rseFlashDriverModel><addr>0x0</addr><eraseAll>true</eraseAll><flashDriver>D\:/work/SDK_ICTest/B1X/code/B1_code_base/MVsB1_Base_SDK/Tools/b1_download_v1.1.exe</flashDriver><imageFile>D\:/work/SDK_ICTest/B1X/code/B1_code_base/MVsB1_Base_SDK/examples/Demo_RTC_Timer/Debug/output/Demo_RTC_Timer.bin</imageFile><lock>false</lock><unlock>false</unlock><verify>true</verify></rseFlashDriverModel>
+eclipse.preferences.version=1

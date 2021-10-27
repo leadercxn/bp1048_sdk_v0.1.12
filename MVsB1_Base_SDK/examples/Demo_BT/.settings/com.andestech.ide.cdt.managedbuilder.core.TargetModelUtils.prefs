@@ -1,0 +1,8 @@
+autoBuildEnable=false
+connectType=ICE
+eclipse.preferences.version=1
+iceman.misc.args=-A -N reset-hold-script.tpl -H
+name=ADP-AG101P-4GB-D1088-SPU-32I
+target.project.build.selection=true
+target.project.clean.selection=false
+targetURI=rse\://LOCALHOST/~target/ADP-AG101P-4GB-D1088-SPU-32I
