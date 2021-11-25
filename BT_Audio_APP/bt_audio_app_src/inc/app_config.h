@@ -695,14 +695,14 @@
 	#ifdef CFG_USE_SW_UART
 		#define SW_UART_IO_PORT				    SWUART_GPIO_PORT_A//SWUART_GPIO_PORT_B
 		#define SW_UART_IO_PORT_PIN_INDEX	    1//bit num
-		#define  CFG_SW_UART_BANDRATE   		460800//software uart baud rate select:38400 57600 115200 256000 460800 ,default 460800
+		#define  CFG_SW_UART_BANDRATE   		115200//software uart baud rate select:38400 57600 115200 256000 460800 ,default 460800
 	#else
 		#ifdef CFG_COMMUNICATION_BY_UART
 		#define CFG_UART_TX_PORT  				(1)//tx port  0--A6£¬1--A10, 2--A25
 		#else
 		#define CFG_UART_TX_PORT 				(2)//tx port  0--A6£¬1--A10, 2--A25, 3--A0, 4--A1
 		#endif
-		#define  CFG_UART_BANDRATE   			512000//hardware uart baud set 
+		#define  CFG_UART_BANDRATE   			115200//hardware uart baud set
 	#endif
 #endif
 

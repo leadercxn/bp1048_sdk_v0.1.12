@@ -90,7 +90,7 @@ void report_up_grate()
 	{
 		if(SREG_FLASH_BOOT_FLAGE.ERROR_CODE == USER_CODE_RUN_START)
 		{
-			APP_DBG("正常启动\n");
+			APP_DBG("正常启动,你好\n");
 		}
 		else if(SREG_FLASH_BOOT_FLAGE.ERROR_CODE == UPDAT_OK)
 		{
