@@ -1,34 +1,21 @@
----------------------------------------------------------------------------------------
-					ËµÃ÷ÎÄµµ
+[BT_Audio_APP] 		--è“ç‰™éŸ³é¢‘åº”ç”¨å¼€å‘ä»£ç åŒ…
 
-	Shanghai Mountain View Silicon Co. Ltd. Copyright 2015, All rights reserved.
+	>[.settings] 	--å·¥ç¨‹é…ç½®æ–‡ä»¶
 
-	±¾ÎÄµµÊÇSDK·¢²¼°üÖÐµÄÄ¿Â¼½á¹¹ÒÔ¼°ÎÄ¼þµÄËµÃ÷¡£
+	>[BT_Audio_APP_src]--è“ç‰™éŸ³é¢‘åº”ç”¨æºä»£ç 
 
-	ÉÏº£É½¾°¼¯³ÉµçÂ·¹É·ÝÓÐÏÞ¹«Ë¾(¼ò³Æ"É½¾°")±£Áô¶Ô±¾ÎÄµµµÄ×îÖÕ½âÊÍÈ¨¡£
+	.cproject		--å·¥ç¨‹é…ç½®æ–‡ä»¶
 
-	ÈÎºÎÈË²»µÃÒÔÈÎºÎÐÎÊ½ (Èç£ºµç×ÓµÄ¡¢»úÐµµÄ¡¢ÊÖÊéµÄ¡¢¹âÑ§´æ´¢µÄ»òÒÔÆäËüÓïÑÔ±í
-	ÊöµÄÐÎÊ½£¬µÈµÈ) ¸´ÖÆ¡¢¸´Ó¡»ò´æ´¢±¾ÎÄ¼þµÄÈ«²¿»òÒ»²¿·ÖÄÚÈÝ£¬³ý·ÇµÃµ½É½¾°µÄÊé
-	ÃæÍ¬Òâ¡£
------------------------------------------------------------------------------------------
-[BT_Audio_APP] 		--À¶ÑÀÒôÆµÓ¦ÓÃ¿ª·¢´úÂë°ü
+	.project		--å·¥ç¨‹é…ç½®æ–‡ä»¶
 
-	>[.settings] 	--¹¤³ÌÅäÖÃÎÄ¼þ
+	BT_Audio_APP_history.txt	--å‘å¸ƒåŒ…åŽ†å²æ›´æ–°è®°å½•
 
-	>[BT_Audio_APP_src]--À¶ÑÀÒôÆµÓ¦ÓÃÔ´´úÂë
+	nds32-ae210p.ld		--ldæ–‡ä»¶ï¼Œç”±sagæ–‡ä»¶è‡ªåŠ¨ç”Ÿæˆ
 
-	.cproject		--¹¤³ÌÅäÖÃÎÄ¼þ
+	nds32-ae210p.sag		--sagæ–‡ä»¶
 
-	.project		--¹¤³ÌÅäÖÃÎÄ¼þ
+	script.bat			--è‡ªåŠ¨è°ƒç”¨æç¤ºéŸ³ç”Ÿæˆè„šæœ¬ï¼Œå¹¶æ›´æ–°å¤´æ–‡ä»¶åˆ°å·¥ç¨‹ä¸­
 
-	BT_Audio_APP_history.txt	--·¢²¼°üÀúÊ·¸üÐÂ¼ÇÂ¼
-
-	nds32-ae210p.ld		--ldÎÄ¼þ£¬ÓÉsagÎÄ¼þ×Ô¶¯Éú³É
-
-	nds32-ae210p.sag		--sagÎÄ¼þ
-
-	script.bat			--×Ô¶¯µ÷ÓÃÌáÊ¾ÒôÉú³É½Å±¾£¬²¢¸üÐÂÍ·ÎÄ¼þµ½¹¤³ÌÖÐ
-
-[MVsB1_SDK] 		--»ù´¡SDK¿ª·¢°ü£¬»ù´¡°üµÄÎÄ¼þ½á¹¹¼û»ù´¡°üµÄreadmeÎÄ¼þ
+[MVsB1_SDK] 		--åŸºç¡€SDKå¼€å‘åŒ…ï¼ŒåŸºç¡€åŒ…çš„æ–‡ä»¶ç»“æž„è§åŸºç¡€åŒ…çš„readmeæ–‡ä»¶
 
 
