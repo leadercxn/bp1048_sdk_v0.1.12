@@ -285,6 +285,8 @@ MessageId KeyScan(void)
 		BeepEnable();
 		gFuncID = ADKEY_TAB[AdcKeyMsg.index][AdcKeyMsg.type - 1];
 		APP_DBG("AdcKeyMsg = %d, %d\n", AdcKeyMsg.index, AdcKeyMsg.type);
+		trace_debug("hello\n\r");
+		trace_debugln("AdcKeyMsg = %d, %d\n", AdcKeyMsg.index, AdcKeyMsg.type);
 	}
 #endif
 

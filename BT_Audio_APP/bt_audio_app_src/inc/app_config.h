@@ -972,4 +972,11 @@
 #error Conflict: Uart Rx Pin  X  Hdmi HPD Pin!
 #endif
 
+
+/**
+ * @brief 自定义添加宏控制
+ */
+#define TRACE_ENABLE		//使用自己习惯的日志打印格式
+
+
 #endif /* APP_CONFIG_H_ */

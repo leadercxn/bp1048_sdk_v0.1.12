@@ -268,28 +268,28 @@ static void DeviceServiceEntrance(void * param)
 #ifdef CFG_FUNC_POWER_MONITOR_EN
 				msgSend.msgId = PowerMonitor();
 				if(msgSend.msgId != MSG_NONE)
-			{
-				if(msgSend.msgId == PWR_MNT_OFF_V)
 				{
-					#ifdef	CFG_FUNC_POWERKEY_EN
-				    msgSend.msgId = MSG_POWERDOWN;
-					APP_DBG("msgSend.msgId = MSG_DEVICE_SERVICE_POWERDOWN\n");
-					#elif defined(CFG_SOFT_POWER_KEY_EN)
-					msgSend.msgId = MSG_SOFT_POWER;
-					APP_DBG("msgSend.msgId = MSG_DEVICE_SERVICE_SOFT_POWEROFF\n");
-					#else
-					msgSend.msgId = MSG_DEEPSLEEP;
-					APP_DBG("msgSend.msgId = MSG_DEVICE_SERVICE_DEEPSLEEP\n");
-					#endif
-					
+					if(msgSend.msgId == PWR_MNT_OFF_V)
+					{
+						#ifdef	CFG_FUNC_POWERKEY_EN
+						msgSend.msgId = MSG_POWERDOWN;
+						APP_DBG("msgSend.msgId = MSG_DEVICE_SERVICE_POWERDOWN\n");
+						#elif defined(CFG_SOFT_POWER_KEY_EN)
+						msgSend.msgId = MSG_SOFT_POWER;
+						APP_DBG("msgSend.msgId = MSG_DEVICE_SERVICE_SOFT_POWEROFF\n");
+						#else
+						msgSend.msgId = MSG_DEEPSLEEP;
+						APP_DBG("msgSend.msgId = MSG_DEVICE_SERVICE_DEEPSLEEP\n");
+						#endif
+						
+					}
+					else
+					{
+						msgSend.msgId = MSG_DEVICE_SERVICE_BATTERY_LOW;
+						APP_DBG("msgSend.msgId = MSG_DEVICE_SERVICE_BATTERY_LOW\n");
+					}
+					MessageSend(deviceServiceCt.parentMsgHandle, &msgSend);
 				}
-				else
-				{
-					msgSend.msgId = MSG_DEVICE_SERVICE_BATTERY_LOW;
-					APP_DBG("msgSend.msgId = MSG_DEVICE_SERVICE_BATTERY_LOW\n");
-				}
-				MessageSend(deviceServiceCt.parentMsgHandle, &msgSend);
-			}
 #endif
 #ifdef CFG_FUNC_RTC_EN
 				RtcStateCtrl();
