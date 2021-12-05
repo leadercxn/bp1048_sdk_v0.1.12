@@ -120,11 +120,30 @@ const uint16_t UserADKey_Tab[11]=
 	ADKEY_10,
 };
 
+static char *mp_adc_key_channel[] = {
+	"ADC_CHANNEL_VIN",	
+	"ADC_CHANNEL_VBK",		
+	"ADC_CHANNEL_VDD1V2",		
+	"ADC_CHANNEL_VCOM",		
+	"ADC_CHANNEL_GPIOA20_A23",
+	"ADC_CHANNEL_GPIOA21_A24",
+	"ADC_CHANNEL_GPIOA22_A25",
+	"ADC_CHANNEL_GPIOA26",	
+	"ADC_CHANNEL_GPIOA27",	
+	"ADC_CHANNEL_GPIOA28",	
+	"ADC_CHANNEL_GPIOA29",	
+	"ADC_CHANNEL_GPIOA30",	
+	"ADC_CHANNEL_GPIOA31",	
+	"ADC_CHANNEL_GPIOB0",		
+	"ADC_CHANNEL_GPIOB1",		
+	"ADC_CHANNEL_POWERKEY",	
+};
+
 #ifdef CFG_RES_ADC_KEY_USE
 TIMER			AdcKeyWaitTimer;
 TIMER			AdcKeyScanTimer;
-ADC_KEY_STATE	AdcKeyState;
-static 	uint8_t 	PreKeyIndex = ADC_CHANNEL_EMPTY;
+ADC_KEY_STATE	AdcKeyState;							//adc按键状态
+static 	uint8_t 	PreKeyIndex = ADC_CHANNEL_EMPTY;	//前一次adc按键键值
 
 int32_t AdcKeyInit(void)
 {
@@ -230,11 +249,14 @@ static uint8_t AdcChannelKeyGet(uint8_t Channel)
 	//{
 		//APP_DBG("KeyIndex = %d\n", KeyIndex);
 	//}
+
+	trace_verboseln("adc channel %s value %d, KeyIndex = %d",mp_adc_key_channel[Channel], Val, KeyIndex);
+
 	return KeyIndex;
 }
 
 
-uint8_t GetAdcKeyIndex(void)
+static uint8_t GetAdcKeyIndex(void)
 {
 	uint8_t KeyIndex = ADC_CHANNEL_EMPTY;
 
@@ -290,7 +312,7 @@ AdcKeyMsg AdcKeyScan(void)
 	TimeOutSet(&AdcKeyScanTimer, ADC_KEY_SCAN_TIME);
 	
 	KeyIndex = GetAdcKeyIndex();
-	
+
 	switch(AdcKeyState)
 	{
 		case ADC_KEY_STATE_IDLE:
@@ -301,7 +323,7 @@ AdcKeyMsg AdcKeyScan(void)
 			PreKeyIndex = KeyIndex;
 			TimeOutSet(&AdcKeyWaitTimer, ADC_KEY_JITTER_TIME);
 			//APP_DBG("GOTO JITTER!\n");
-			AdcKeyState = ADC_KEY_STATE_JITTER;
+			AdcKeyState = ADC_KEY_STATE_JITTER;		//消抖
 
 		case ADC_KEY_STATE_JITTER:
 			if(PreKeyIndex != KeyIndex)

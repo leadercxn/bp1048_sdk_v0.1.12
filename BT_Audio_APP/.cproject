@@ -41,6 +41,9 @@
 							<tool command="$(CROSS_COMPILE)gcc" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GCCErrorParser" id="tool.nds32le-elf-mculib-v3s.c.compiler.base.548536476" name="Andes C Compiler" superClass="tool.nds32le-elf-mculib-v3s.c.compiler.base">
 								<option id="nds.c.compiler.option.include.paths.341946989" name="Include paths (-I)" superClass="nds.c.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/bt_audio_app_src/audio}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\cxn\andes\bp_sdk\MVsB1_BT_Audio_SDK_v0.1.12\develop_lib\util&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\cxn\andes\bp_sdk\MVsB1_BT_Audio_SDK_v0.1.12\develop_lib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\cxn\andes\bp_sdk\MVsB1_BT_Audio_SDK_v0.1.12\develop_lib\trace&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/bt_audio_app_src/ai/md5}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/bt_audio_app_src/ai/speex/include/speex}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/bt_audio_app_src/ai/speex/include}&quot;"/>
@@ -85,7 +88,7 @@
 								<option id="nds.c.compiler.option.optimization.lto.1299640613" name="Link Time Optimization (-flto)" superClass="nds.c.compiler.option.optimization.lto" value="false" valueType="boolean"/>
 								<option id="nds.c.compiler.option.optimization.removesections.function.642468704" name="Remove unused function sections (-ffunction-sections)" superClass="nds.c.compiler.option.optimization.removesections.function" value="true" valueType="boolean"/>
 								<option id="nds.c.compiler.option.optimization.removesections.data.766274609" name="Remove unused data sections (-fdata-sections)" superClass="nds.c.compiler.option.optimization.removesections.data" value="true" valueType="boolean"/>
-								<option id="nds32le-elf-mculib-v3s.c.compiler.option.optimization.level.base.1169595710" superClass="nds32le-elf-mculib-v3s.c.compiler.option.optimization.level.base" value="nds.c.optimization.level.most" valueType="enumerated"/>
+								<option id="nds32le-elf-mculib-v3s.c.compiler.option.optimization.level.base.1169595710" name="Optimization Level" superClass="nds32le-elf-mculib-v3s.c.compiler.option.optimization.level.base" value="nds.c.optimization.level.most" valueType="enumerated"/>
 								<inputType id="tool.nds.c.compiler.input.619503611" superClass="tool.nds.c.compiler.input"/>
 							</tool>
 							<tool command="$(CROSS_COMPILE)gcc" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GLDErrorParser" id="tool.nds32le-elf-mculib-v3s.c.linker.base.1485094752" name="Andes C Linker" superClass="tool.nds32le-elf-mculib-v3s.c.linker.base">
@@ -123,7 +126,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/bt_audio_app_src/libopus/lib}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/@INCLUDES/middleware/xmai}&quot;"/>
 								</option>
-								<option defaultValue="-O0" id="nds.c.link.option.optimization.level.1768301097" name="Optimization Level" superClass="nds.c.link.option.optimization.level" value="-Og" valueType="string"/>
+								<option defaultValue="-O0" id="nds.c.link.option.optimization.level.1768301097" name="Optimization Level" superClass="nds.c.link.option.optimization.level" value="-O3" valueType="string"/>
 								<option defaultValue="true" id="nds32le-elf-mculib-v3s.c.link.option.noshared.base.94131748" name="No shared libraries (-static)" superClass="nds32le-elf-mculib-v3s.c.link.option.noshared.base" valueType="boolean"/>
 								<option id="nds.c.link.option.nostart.1403177588" name="Do not use standard start files (-nostartfiles)" superClass="nds.c.link.option.nostart" value="true" valueType="boolean"/>
 								<option id="nds.c.linker.option.cmodel.16442458" name="Code Model" superClass="nds.c.linker.option.cmodel" value="-mcmodel=medium" valueType="string"/>
@@ -187,7 +190,7 @@
 					</folderInfo>
 					<fileInfo id="config.nds32le-elf-mculib-v3s.exe.debug.1519929465.1301929898" name="libfatfs.a" rcbsApplicability="disable" resourcePath="middleware/fatfs/libfatfs.a" toolsToInvoke=""/>
 					<folderInfo id="config.nds32le-elf-mculib-v3s.exe.debug.1519929465.2121914053" name="/" resourcePath="bt_audio_app_src/xiaomi_ai">
-						<toolChain id="nds.nds32le-elf-mculib-v3s.base.1829837130" name="nds32le-elf-mculib-v3s" superClass="nds.nds32le-elf-mculib-v3s.base" unusedChildren="">
+						<toolChain errorParsers="" id="nds.nds32le-elf-mculib-v3s.base.1829837130" name="nds32le-elf-mculib-v3s" superClass="nds.nds32le-elf-mculib-v3s.base" unusedChildren="">
 							<option id="nds32le-elf-mculib-v3s.managedbuild.option.toolchain.NDS32_CPU.458838856.1584167783" name="CPU" superClass="nds32le-elf-mculib-v3s.managedbuild.option.toolchain.NDS32_CPU.458838856"/>
 							<option id="nds32le-elf-mculib-v3s.managedbuild.option.toolchain.NDS32_LIST_CPU.1573164539.2103377764" name="LIST_CPU" superClass="nds32le-elf-mculib-v3s.managedbuild.option.toolchain.NDS32_LIST_CPU.1573164539"/>
 							<option id="nds32le-elf-mculib-v3s.managedbuild.option.toolchain.NDS32_CORE.1550214933.499264240" name="CORE" superClass="nds32le-elf-mculib-v3s.managedbuild.option.toolchain.NDS32_CORE.1550214933"/>
@@ -203,19 +206,19 @@
 							<tool id="tool.nds32le-elf-mculib-v3s.archiver.base.1037433445" name="Andes Archiver" superClass="tool.nds32le-elf-mculib-v3s.archiver.base.599789221"/>
 							<tool id="tool.nds32le-elf-mculib-v3s.cpp.compiler.base.1285921491" name="Andes C++ Compiler" superClass="tool.nds32le-elf-mculib-v3s.cpp.compiler.base.1071303482"/>
 							<tool id="tool.nds32le-elf-mculib-v3s.cpp.linker.base.434287281" name="Andes C++ Linker" superClass="tool.nds32le-elf-mculib-v3s.cpp.linker.base.425081196"/>
-							<tool id="tool.nds32le-elf-mculib-v3s.c.compiler.base.1392571323" name="Andes C Compiler" superClass="tool.nds32le-elf-mculib-v3s.c.compiler.base.548536476">
+							<tool errorParsers="org.eclipse.cdt.core.GCCErrorParser" id="tool.nds32le-elf-mculib-v3s.c.compiler.base.1392571323" name="Andes C Compiler" superClass="tool.nds32le-elf-mculib-v3s.c.compiler.base.548536476">
 								<inputType id="tool.nds.c.compiler.input.1856134757" superClass="tool.nds.c.compiler.input"/>
 							</tool>
 							<tool id="tool.nds32le-elf-mculib-v3s.c.linker.base.2016054858" name="Andes C Linker" superClass="tool.nds32le-elf-mculib-v3s.c.linker.base.1485094752"/>
-							<tool id="tool.nds32le-elf-mculib-v3s.assembler.base.703080200" name="Andes Assembler" superClass="tool.nds32le-elf-mculib-v3s.assembler.base.117608961">
+							<tool errorParsers="org.eclipse.cdt.core.GASErrorParser" id="tool.nds32le-elf-mculib-v3s.assembler.base.703080200" name="Andes Assembler" superClass="tool.nds32le-elf-mculib-v3s.assembler.base.117608961">
 								<inputType id="tool.nds.assembler.input.589492466" superClass="tool.nds.assembler.input"/>
 							</tool>
-							<tool id="tool.nds32le-elf-mculib-v3s.nm.base.1400203166" name="NM (symbol listing)" superClass="tool.nds32le-elf-mculib-v3s.nm.base.1539676136"/>
-							<tool id="tool.nds32le-elf-mculib-v3s.readelf.base.1319873890" name="Readelf (ELF info listing)" superClass="tool.nds32le-elf-mculib-v3s.readelf.base.2079687443"/>
-							<tool id="tool.nds32le-elf-mculib-v3s.objdump.base.101916192" name="Objdump (disassembly)" superClass="tool.nds32le-elf-mculib-v3s.objdump.base.1479603782"/>
-							<tool id="tool.nds32le-elf-mculib-v3s.objcopy.base.530520868" name="Objcopy (object content copy)" superClass="tool.nds32le-elf-mculib-v3s.objcopy.base.1692092306"/>
-							<tool id="tool.nds32le-elf-mculib-v3s.size.base.1615327208" name="Size (section size listing)" superClass="tool.nds32le-elf-mculib-v3s.size.base.1918770417"/>
-							<tool id="tool.nds32le-elf-mculib-v3s.ldsag.base.1237945329" name="LdSaG Tool" superClass="tool.nds32le-elf-mculib-v3s.ldsag.base.367638005"/>
+							<tool errorParsers="" id="tool.nds32le-elf-mculib-v3s.nm.base.1400203166" name="NM (symbol listing)" superClass="tool.nds32le-elf-mculib-v3s.nm.base.1539676136"/>
+							<tool errorParsers="" id="tool.nds32le-elf-mculib-v3s.readelf.base.1319873890" name="Readelf (ELF info listing)" superClass="tool.nds32le-elf-mculib-v3s.readelf.base.2079687443"/>
+							<tool errorParsers="" id="tool.nds32le-elf-mculib-v3s.objdump.base.101916192" name="Objdump (disassembly)" superClass="tool.nds32le-elf-mculib-v3s.objdump.base.1479603782"/>
+							<tool errorParsers="" id="tool.nds32le-elf-mculib-v3s.objcopy.base.530520868" name="Objcopy (object content copy)" superClass="tool.nds32le-elf-mculib-v3s.objcopy.base.1692092306"/>
+							<tool errorParsers="" id="tool.nds32le-elf-mculib-v3s.size.base.1615327208" name="Size (section size listing)" superClass="tool.nds32le-elf-mculib-v3s.size.base.1918770417"/>
+							<tool errorParsers="" id="tool.nds32le-elf-mculib-v3s.ldsag.base.1237945329" name="LdSaG Tool" superClass="tool.nds32le-elf-mculib-v3s.ldsag.base.367638005"/>
 						</toolChain>
 					</folderInfo>
 					<fileInfo id="config.nds32le-elf-mculib-v3s.exe.debug.1519929465.1246809693" name="xm_auth.h" rcbsApplicability="disable" resourcePath="bt_audio_app_src/xiaomi_ai/xm_auth.h" toolsToInvoke=""/>

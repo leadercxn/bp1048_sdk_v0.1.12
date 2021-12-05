@@ -48,7 +48,7 @@ typedef struct _SysVolContext
 typedef struct _MainAppContext
 {
 	xTaskHandle			taskHandle;
-	MessageHandle		msgHandle;
+	MessageHandle		msgHandle;		//各个线程发回到主task的消息队列
 	TaskState			state;
 	ModeState			MState;
 	AppMode				appCurrentMode;

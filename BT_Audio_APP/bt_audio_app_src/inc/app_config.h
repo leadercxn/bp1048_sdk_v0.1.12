@@ -18,6 +18,8 @@
 #include "i2c_host.h"
 #include "flash_boot.h"
 
+#include "develop_lib.h"	//选中开发库的头文件
+
 //************************************************************************************************************
 //    固件版本FIRMWARE_VERSION 在flash_config.h配置
 // ***********************************************************************************************************
@@ -971,12 +973,5 @@
 #if defined(CFG_FUNC_SHELL_EN) && CFG_UART_TX_PORT == 2 && defined(CFG_APP_HDMIIN_MODE_EN) && HDMI_HPD_CHECK_STATUS_IO_PIN == GPIOA24
 #error Conflict: Uart Rx Pin  X  Hdmi HPD Pin!
 #endif
-
-
-/**
- * @brief 自定义添加宏控制
- */
-#define TRACE_ENABLE		//使用自己习惯的日志打印格式
-
 
 #endif /* APP_CONFIG_H_ */

@@ -384,6 +384,9 @@ int main(void)
 
 	SystemClockInit();
 
+	/**
+	 * log¥Æø⁄≈‰÷√
+	 */
 	LogUartConfig(TRUE);
 
 #if FLASH_BOOT_EN
@@ -525,6 +528,9 @@ int main(void)
 #endif
 	RTC_ServiceInit(RstFlag&0x01);
 #endif
+	/**
+	 * ¥¥Ω®app-task
+	 */
 	MainAppTaskStart();
 	vTaskStartScheduler();
 
