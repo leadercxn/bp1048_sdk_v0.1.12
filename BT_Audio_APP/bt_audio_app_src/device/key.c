@@ -171,6 +171,15 @@ static const uint16_t IRKEY_TAB[][KEY_MSG_DEFAULT_NUM] =
 
 static const uint16_t PWRKey_TAB = MSG_PLAY_PAUSE;
 
+static char *mp_key_event[] = {
+	"ADC_KEY_UNKOWN_TYPE"		,
+	"ADC_KEY_PRESSED"			,
+	"ADC_KEY_RELEASED"			,
+	"ADC_KEY_LONG_PRESSED"		,
+	"ADC_KEY_LONG_PRESS_HOLD"	,
+	"ADC_KEY_LONG_RELEASED"		,
+};
+
 uint32_t GetGlobalKeyValue(void)
 {
     return gFuncID;
@@ -250,7 +259,7 @@ inline bool GIE_STATE_GET(void);
  * @brief       KeyScan,根据键值和事件类型查表，输出消息值
  * @param       None  
  * @Output      None
- * @return      MessageId
+ * @return      MessageId 对应按键的事件代号
  * @Others      
  * Record
  * 1.Date        : 20180123
@@ -278,16 +287,22 @@ MessageId KeyScan(void)
 	PWRKeyMsg PWRKeyMsg;
 #endif
 
+	/**
+	 * @brief adc按键
+	 */
 #ifdef CFG_RES_ADC_KEY_USE
 	AdcKeyMsg = AdcKeyScan();
 	if(AdcKeyMsg.index != ADC_CHANNEL_EMPTY && AdcKeyMsg.type != ADC_KEY_UNKOWN_TYPE)
 	{
 		BeepEnable();
 		gFuncID = ADKEY_TAB[AdcKeyMsg.index][AdcKeyMsg.type - 1];
-		APP_DBG("AdcKeyMsg = %d, %d\n", AdcKeyMsg.index, AdcKeyMsg.type);
+		trace_verboseln("AdcKeyMsg index = %d, event = %s", AdcKeyMsg.index, mp_key_event[AdcKeyMsg.type]);
 	}
 #endif
 
+	/**
+	 * @brief IO按键
+	 */
 #ifdef CFG_RES_IO_KEY_SCAN
 	ioKeyMsg = IOKeyScan();
 	if(ioKeyMsg.index != IO_CHANNEL_EMPTY && ioKeyMsg.type != IO_KEY_UNKOWN_TYPE)
@@ -295,9 +310,11 @@ MessageId KeyScan(void)
 		gFuncID = IOKEY_TAB[ioKeyMsg.index][ioKeyMsg.type - 1];
 		APP_DBG("IOKeyindex = %d, %d\n", ioKeyMsg.index, ioKeyMsg.type);
 	}
-
 #endif
 
+	/**
+	 * @brief IR红外按键
+	 */
 #ifdef CFG_RES_IR_KEY_USE
 	IRKeyMsg = IRKeyScan();
 	if(IRKeyMsg.index != IR_KEY_NONE && IRKeyMsg.type != IR_KEY_UNKOWN_TYPE)
@@ -307,6 +324,9 @@ MessageId KeyScan(void)
 	}
 #endif
 
+	/**
+	 * @brief 编码器按键
+	 */
 #ifdef CFG_RES_CODE_KEY_USE
 	CodeKey = CodeKeyScan();
 	if(CodeKey != CODE_KEY_NONE)
@@ -333,11 +353,12 @@ MessageId KeyScan(void)
 #endif
 
 	{
+		/**
+		 * 按键双击处理
+		 */
 #ifdef CFG_FUNC_DBCLICK_MSG_EN
 		DbclickGetMsg(gFuncID);
-#endif
 
-#ifdef CFG_FUNC_DBCLICK_MSG_EN
 		DbclickProcess();
 #endif
 

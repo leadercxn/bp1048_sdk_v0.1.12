@@ -65,8 +65,6 @@ uint8_t DBG_Global(char * str,char **fmt, ...);
 #define	OTG_DBG(format, ...)		//printf(format, ##__VA_ARGS__)
 #define	BT_DBG(format, ...)			printf(format, ##__VA_ARGS__)//do{printf("[BT] "); printf(format, ##__VA_ARGS__);}while(0)
 
-
-
 int DbgUartInit(int Which, unsigned int BaudRate, unsigned char DatumBits, unsigned char Parity, unsigned char StopBits);
 
 
@@ -147,14 +145,11 @@ void LedPortRise(uint8_t Index);
 void LedPortDown(uint8_t Index);
 bool LedPortGet(uint8_t Index);//TRUE:高电平，FALSE:低电平，index无效时 默认FALSE
 
+
 #ifdef __cplusplus
 }
 #endif//__cplusplus
 
-/**
- * @}
- * @}
- */
- 
+
 #endif //__DBG_H__ 
 

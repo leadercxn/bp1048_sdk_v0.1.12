@@ -1849,6 +1849,7 @@ static void MainAppTaskEntrance(void * param)
 {
 	int16_t i;
 	MessageContext		msg;
+	bool is_msg_get = FALSE;
 
 	DelayMsFunc = (DelayMsFunction)vTaskDelay; //提高Os条件下驱动层延时函数精度，非OS默认使用DelayMs
 	DMA_ChannelAllocTableSet((uint8_t*)DmaChannelMap);
@@ -2038,7 +2039,15 @@ static void MainAppTaskEntrance(void * param)
 		
 		
 		WDG_Feed();
-		MessageRecv(mainAppCt.msgHandle, &msg, MAIN_APP_MSG_TIMEOUT);
+
+		/**
+		 * 提取各个task返回的消息
+		 */
+		is_msg_get = MessageRecv(mainAppCt.msgHandle, &msg, MAIN_APP_MSG_TIMEOUT);
+		if(is_msg_get)
+		{
+			trace_verboseln("main_task get id = %s",message_id_name_get(msg.msgId));
+		}
 	
 #ifdef CFG_FUNC_SILENCE_AUTO_POWER_OFF_EN
         extern uint32_t  Silence_Power_Off_Time;
@@ -2102,7 +2111,8 @@ static void MainAppTaskEntrance(void * param)
 			#endif
 		}
 		#endif
-#endif		
+#endif
+
 		switch(msg.msgId)
 		{
 #ifdef CFG_FUNC_REMIND_SOUND_EN

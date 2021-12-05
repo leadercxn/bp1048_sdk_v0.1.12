@@ -96,8 +96,6 @@ typedef struct _AdcKeyMsg
     uint16_t type;
 }AdcKeyMsg;
 
-uint8_t GetAdcKeyIndex(void);
-
 AdcKeyMsg AdcKeyScan(void);
 
 int32_t AdcKeyInit(void);

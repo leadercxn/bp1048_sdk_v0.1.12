@@ -38,7 +38,7 @@
 #endif
 
 #define DEVICE_SERVICE_SIZE				384//1024
-#define DEVICE_SERVICE_PRIO				3
+#define DEVICE_SERVICE_PRIO				3	// 线程优先级
 #define DEVICE_SERVICE_TIMEOUT			1	/* 1ms */
 #define DEVICE_SERVICE_TIMEOUT_1MS		1
 #define NUM_MESSAGE_QUEUE				4
@@ -54,10 +54,10 @@ extern void Clear_Error_Code(void);
 
 typedef struct _DeviceServiceContext
 {
-	xTaskHandle		taskHandle;
-	MessageHandle	msgHandle;
-	MessageHandle	parentMsgHandle;
-	TaskState		serviceState;
+	xTaskHandle		taskHandle;				// task句柄
+	MessageHandle	msgHandle;				// 存放该task状态的消息队列
+	MessageHandle	parentMsgHandle;		// 存放该task获取到相关信息(例如: 按键键值)的消息队列
+	TaskState		serviceState;			// 任务运行状态
 }DeviceServiceContext;
 
 static DeviceServiceContext			deviceServiceCt;
@@ -139,7 +139,11 @@ static void DeviceServiceDeinit(void)
 }
 
 extern uint32_t SysemMipsPercent;
-//sleep前device 暂停，会收到keytable更换msg
+/**
+ * sleep前device 暂停，会收到keytable更换msg
+ * 
+ * 该task的主体函数
+ */
 static void DeviceServiceEntrance(void * param)
 {
 	MessageContext		msgRecv;
@@ -151,7 +155,7 @@ static void DeviceServiceEntrance(void * param)
 	bool				MipsLog = TRUE;
 #endif
 //	ResourceRegister(AppResourceDac);//默认开启，配合缺省APP模式
-	
+
 	/* Send message to main app */
 	msgSend.msgId		= MSG_DEVICE_SERVICE_CREATED;
 	MessageSend(deviceServiceCt.parentMsgHandle, &msgSend);
@@ -192,6 +196,9 @@ static void DeviceServiceEntrance(void * param)
 	
 #endif
 #endif
+		/**
+		 * 读取传到该task的消息
+		 */
 		MessageRecv(deviceServiceCt.msgHandle, &msgRecv, MsgTimeOut);
 		//APP_DBG("Device service run\n");
 		switch(msgRecv.msgId)
@@ -250,13 +257,16 @@ static void DeviceServiceEntrance(void * param)
 				break;
 		}
 
+		/**
+		 * 根据该task的任务才执行的处理
+		 */
 		if(deviceServiceCt.serviceState == TaskStateRunning)
 		{
 #ifdef CFG_FUNC_BREAKPOINT_EN
 			BreakPointSave(msgRecv);
 #endif
 #if defined(CFG_RES_ADC_KEY_SCAN) || defined(CFG_RES_IR_KEY_SCAN) || defined(CFG_RES_CODE_KEY_USE)|| defined(CFG_ADC_LEVEL_KEY_EN) || defined(CFG_RES_IO_KEY_SCAN)
-			/* Key scan*/
+			/* 10ms/每次 Key-scan*/
 			if(IsTimeOut(&ScanTimer))
 			{
 				TimeOutSet(&ScanTimer, 10);
@@ -268,28 +278,28 @@ static void DeviceServiceEntrance(void * param)
 #ifdef CFG_FUNC_POWER_MONITOR_EN
 				msgSend.msgId = PowerMonitor();
 				if(msgSend.msgId != MSG_NONE)
-			{
-				if(msgSend.msgId == PWR_MNT_OFF_V)
 				{
-					#ifdef	CFG_FUNC_POWERKEY_EN
-				    msgSend.msgId = MSG_POWERDOWN;
-					APP_DBG("msgSend.msgId = MSG_DEVICE_SERVICE_POWERDOWN\n");
-					#elif defined(CFG_SOFT_POWER_KEY_EN)
-					msgSend.msgId = MSG_SOFT_POWER;
-					APP_DBG("msgSend.msgId = MSG_DEVICE_SERVICE_SOFT_POWEROFF\n");
-					#else
-					msgSend.msgId = MSG_DEEPSLEEP;
-					APP_DBG("msgSend.msgId = MSG_DEVICE_SERVICE_DEEPSLEEP\n");
-					#endif
-					
+					if(msgSend.msgId == PWR_MNT_OFF_V)
+					{
+						#ifdef	CFG_FUNC_POWERKEY_EN
+						msgSend.msgId = MSG_POWERDOWN;
+						APP_DBG("msgSend.msgId = MSG_DEVICE_SERVICE_POWERDOWN\n");
+						#elif defined(CFG_SOFT_POWER_KEY_EN)
+						msgSend.msgId = MSG_SOFT_POWER;
+						APP_DBG("msgSend.msgId = MSG_DEVICE_SERVICE_SOFT_POWEROFF\n");
+						#else
+						msgSend.msgId = MSG_DEEPSLEEP;
+						APP_DBG("msgSend.msgId = MSG_DEVICE_SERVICE_DEEPSLEEP\n");
+						#endif
+						
+					}
+					else
+					{
+						msgSend.msgId = MSG_DEVICE_SERVICE_BATTERY_LOW;
+						APP_DBG("msgSend.msgId = MSG_DEVICE_SERVICE_BATTERY_LOW\n");
+					}
+					MessageSend(deviceServiceCt.parentMsgHandle, &msgSend);
 				}
-				else
-				{
-					msgSend.msgId = MSG_DEVICE_SERVICE_BATTERY_LOW;
-					APP_DBG("msgSend.msgId = MSG_DEVICE_SERVICE_BATTERY_LOW\n");
-				}
-				MessageSend(deviceServiceCt.parentMsgHandle, &msgSend);
-			}
 #endif
 #ifdef CFG_FUNC_RTC_EN
 				RtcStateCtrl();
